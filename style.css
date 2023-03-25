@@ -1,0 +1,71 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: blueviolet;
+}
+
+div#calendario{
+    width: max-content;
+    height: max-content;
+    background-color: white;
+    padding: 35px 12px 40px 12px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div#calendario h1{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+}
+
+div#calendario h2{
+    text-align: center;
+    font-size: 1em;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+
+div#calendario div#subcalendario div#dias{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 36px 36px 36px 36px 36px 36px 36px;
+    gap: 5px;
+}
+
+div#calendario div#subcalendario div#dias div{
+    text-align: center;
+    font-weight: lighter;
+}
+div#calendario div#subcalendario div#dias div.dia, div.diaAtual{
+    background-color: white;
+    border: 1px solid lightblue;
+    color: black;
+    padding: 5px 8px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+div#calendario div#subcalendario div#dias div.diaAtual{
+    background-color: lightblue;
+    border: 1px solid black;
+}
