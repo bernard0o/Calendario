@@ -29,6 +29,7 @@ window.onload = function(){
             div.innerText = `${i - count}`;
         }
         else{
+            div.className = "dia";
             count ++;
         }
         local.appendChild(div);
