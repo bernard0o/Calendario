@@ -57,7 +57,7 @@ div#calendario div#subcalendario div#dias div{
 }
 div#calendario div#subcalendario div#dias div.dia, div.diaAtual{
     background-color: white;
-    border: 1px solid lightblue;
+    border: 1px solid rgb(100, 155, 173);
     color: black;
     padding: 5px 8px;
     border-radius: 5px;
