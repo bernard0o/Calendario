@@ -13,7 +13,42 @@ window.onload = function(){
     let data3 = new Date(ano, mes, 1);
     let primeiroDiaMes = data3.getDay() + 1;
     
-    /* Passando dados pro HTML*/
+    /* Criando Divs*/
+
+        /* Topcalendário*/
+            /* h1 */
+            let titulo = document.createElement("h1");
+            titulo.id = "ano";
+            titulo.textContent = "Calendário";
+            document.getElementById("calendario").appendChild(titulo);
+
+        /*Subcalendario*/
+            /* div do subcalendario */
+            let subcalendario = document.createElement("div");
+            subcalendario.id = "subcalendario";
+            document.getElementById("calendario").appendChild(subcalendario);
+
+            /* h2 */
+            let divdatahoje = document.createElement("div");
+            divdatahoje.id = "dataHoje";
+            document.getElementById("subcalendario").appendChild(divdatahoje);
+            let h2 = document.createElement("h2");
+            h2.id = "data";
+            document.getElementById("dataHoje").appendChild(h2);
+
+            /* div que guarda os dias do mês */
+            let subdiv = document.createElement("div");
+            subdiv.id = "dias";
+            document.getElementById("subcalendario").appendChild(subdiv);
+
+            /* dom, seg, ter, qua, qui, sex, sab*/
+            for (str in toWordsDay){
+                let div = document.createElement("div");
+                div.textContent = `${toWordsDay[str].slice(0, 3)}`;
+                document.getElementById("dias").appendChild(div);
+            }
+
+    /* Passando dados pro HTML */
     document.getElementById("ano").innerText += ` ${ano}`;
     document.getElementById("data").innerText = `${toWordsDay[data.getDay()]}, ${dia} de ${toWordsYear[mes]}`;
     let local = document.getElementById("dias");
